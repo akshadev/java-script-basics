@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>JS Fundamentals</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+        <!-- Bootstrap CSS -->
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+            crossorigin="anonymous"
+        />
+    </head>
+    <body>
+        <div class="container">
+            <div class="panel">
+                <h2>JS Fundamentals Data Types</h2>
+                <hr />
+                <div id="newId"></div>
+            </div>
+        </div>
+        <script>
+            const element = document.getElementById("newId");
+            const printThis = "Aksha - something new world";
+
+            //numbers
+            let result = 123; // no quotes
+            //strings
+            result = "something"; // single quotes
+            result = "new quotes"; // double quotes
+            result = `New syntax back ticks - ${printThis}`; //back ticks
+            // boolean
+            result = true; // true or false
+            // null
+            result = null; // no value at all
+            // undefined
+            result = undefined; // no data at the moment
+            //Object
+            result = {
+                name: "Aksha",
+                age: 24,
+            };
+            // Symbol
+            result = Symbol("test");
+            // BigInt
+            result = 123213n; // + and  - 2*53 -1 is the max limits for number
+
+            // how to identify what data type?
+            result = typeof result; // typeof variable or typeof(variable)
+
+            // alert
+            alert(234); // number to string conversion
+
+            //prompt
+            result = prompt("What is your age?", 30); // return value from the input
+
+            //confirm
+            result = confirm("Is this JS class?"); // returns a boolean true or false
+
+            // Type conversions
+            // to convert any type to string
+            result = typeof String(undefined);
+            // Number conversions
+            result = typeof Number(`123`);
+            //Mathematic operations except +
+            result = "6" - "2";
+            result = null - undefined;
+
+            //NaN
+            result = "aksha" - "2"; // aksha - 2 = NaN
+            // conversion rules
+            result = Number(undefined); // NaN
+            result = Number(null); // 0
+            result = Number(true); // 1
+            result = Number(false); // 0
+            result = Number(""); // 0
+            result = Number(" "); // 0
+            result = Number("    13"); // 13
+            result = Number("aksha123"); //NaN
+            result = Number(NaN); //NaN
+
+            //Boolean
+            result = Boolean(true); // true
+            result = Boolean(false); // false
+            result = Boolean("yes"); // true
+            result = Boolean(""); // false
+            result = Boolean(" "); // true
+            result = Boolean(undefined); // false
+            result = Boolean(null); // false
+            result = Boolean(" ") - 1; // 0
+            result = Boolean(NaN); // false
+
+            element.innerHTML = result;
+        </script>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>
